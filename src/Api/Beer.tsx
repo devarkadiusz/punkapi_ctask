@@ -64,8 +64,7 @@ export const LoadBeerByPage = async (page: number) => {
 }
 
 export const LoadBeerByIds = async (ids: number[]) => {
-    const per = 5;
-    let data: any;
+    // const per = 5;
     ids.map(async (id: number) => {
         localStorage.setItem(`favorite_${id}`, JSON.stringify(await GetBeerById(id)));
     })

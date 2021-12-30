@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect, useState } from 'react';
+import { FunctionComponent, useState } from 'react';
 import * as Api from '../../../Api/Api';
 import "./Auth.sass";
 import { Navigate } from "react-router-dom";
@@ -33,21 +33,21 @@ export const Auth: FunctionComponent = () => {
         <Form>
             <span className='title'>{registerForm ? 'Zarejestruj się' :'Zaloguj się'}</span>
             <span>Login</span>
-            <input type='text' className={status == 404 || (registerForm && status == 409) ? 'bad_input' : ''} onInput={(e: any) => {
-                data.username = e.target.value;
+            <input type='text' className={status === 404 || (registerForm && status === 409) ? 'bad_input' : ''} onInput={(e: React.FormEvent<HTMLInputElement>) => {
+                data.username = e.currentTarget.value;
                 setData(data);
                 setStatus(undefined);
             }} />
 
-            {registerForm ? <div><span>Email</span><input type='text' className={status == 404 || (registerForm && status == 409) ? 'bad_input' : ''} onInput={(e: any) => {
-                data.email = e.target.value;
+            {registerForm ? <div><span>Email</span><input type='text' className={status === 404 || (registerForm && status === 409) ? 'bad_input' : ''} onInput={(e: React.FormEvent<HTMLInputElement>) => {
+                data.email = e.currentTarget.value;
                 setData(data);
                 setStatus(undefined);
             }} /></div> : null}
 
             <span>Password</span>
-            <input type='password' className={status == 404 || (registerForm && status == 409) ? 'bad_input' : ''} onInput={(e: any) => {
-                data.password = e.target.value;
+            <input type='password' className={status === 404 || (registerForm && status === 409) ? 'bad_input' : ''} onInput={(e: React.FormEvent<HTMLInputElement>) => {
+                data.password = e.currentTarget.value;
                 setData(data);
                 setStatus(undefined);
             }} />

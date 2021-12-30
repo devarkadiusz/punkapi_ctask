@@ -1,8 +1,8 @@
-import react, { FunctionComponent } from 'react';
+import React, { FunctionComponent, ReactChild } from 'react';
 
 interface IngredientsToolTipProps {
-    show: any;
-    children: any;
+    show: boolean;
+    children: ReactChild;
 }
 
 export const IngredientsToolTip: FunctionComponent<IngredientsToolTipProps> = (props) => {

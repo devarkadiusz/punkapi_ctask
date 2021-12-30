@@ -1,4 +1,4 @@
-import react, { FunctionComponent, useState } from 'react';
+import { FunctionComponent, useState } from 'react';
 import { Ingredient } from '../../Api/Beer';
 import "./BeerItem.sass";
 import { IngredientsToolTip } from './Ingredients';

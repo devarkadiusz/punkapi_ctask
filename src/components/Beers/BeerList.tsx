@@ -1,5 +1,5 @@
 import { FunctionComponent, useState, useEffect } from 'react';
-import { FavoriteGetAll, FavoriteToggle } from '../../Api/Api';
+import { FavoriteToggle } from '../../Api/Api';
 import { LoadBeerByPage, Beer } from '../../Api/Beer';
 import { BeerItem } from './BeerItem';
 import "./BeerList.sass";

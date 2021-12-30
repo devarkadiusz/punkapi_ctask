@@ -16,7 +16,7 @@ const App: FunctionComponent = () => {
     let token = localStorage.getItem('token');
     if(token && token.length > 0) setAuthed(true);
     else setAuthed(false);
-  });
+  }, [authed]);
   return <main>
     <BrowserRouter>
       <Routes>

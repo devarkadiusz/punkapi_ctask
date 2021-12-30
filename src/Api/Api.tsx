@@ -16,7 +16,7 @@ export const Api = async (method: string, url: string, body: string | undefined,
      }).then(async response => {
         if(response.status < 400)
             return await response.json();
-        else if(response.status == 401)
+        else if(response.status === 401)
             return Logout();
         else
             return response.status
