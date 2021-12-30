@@ -1,0 +1,73 @@
+.BeerItem
+    width: 100%
+    display: block
+    padding: 10px
+    box-sizing: border-box
+    & > .content
+        color: #41a5fb
+        border: 1px solid #bce0fd
+        padding: 10px
+        box-sizing: border-box
+        border-radius: 6px
+        & > .favorite
+            width: 100%
+            display: block
+            text-align: right
+            cursor: pointer
+            img
+                max-width: 33px
+        
+        & > .title
+            margin: 10px 0
+            width: 100%
+            display: block
+            text-align: center
+            font-size: 23px
+            font-weight: 600
+        
+        & > .description
+            &.active
+                height: auto
+            margin: 15px 0
+            width: 100%
+            height: 20px
+            display: block
+            overflow: hidden
+            font-size: 18px
+
+        .Ingredients
+            display: none
+            &.active
+                display: block
+                position: relative
+                & > ul
+                    padding: 10px 20px
+                    box-sizing: border-box
+                    background-color: white
+            & > ul
+                margin: 0
+                padding: 0
+                list-style-type: none
+                li
+                    width: auto
+                    margin: 0
+                    padding: 0
+                    font-size: 13px
+                    & > ul
+                        width: 100%
+                        height: auto
+                        display: block
+                .hops li span:not(:last-child):after
+                    content: "-"
+                    margin: 0 5px
+        
+        & > .image
+            width: 100%
+            margin: 15px 0 0 0
+            display: flex
+            padding: 15px
+            box-sizing: border-box
+            justify-content: center
+            & > img
+                max-width: 100%
+                max-height: 200px

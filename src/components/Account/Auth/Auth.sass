@@ -1,0 +1,59 @@
+.Auth
+    width: 100%
+    display: flex
+    font-family: 'Poppins', sans-serif
+    justify-content: center
+.Form
+    margin: 50px 0 0 0
+    color: #41a5fb
+    max-width: 350px
+    span
+        width: 100%
+        display: block
+        font-weight: 900
+        &.title
+            margin: 50px 0 70px 0
+            font-size: 30px
+            text-align: center
+            font-weight: bold
+            text-transform: uppercase
+        &:not(.title)
+            margin: 0 0 5px 10px
+            
+    input
+        color: #41a5fb
+        margin: 0 0 8px 0
+        width: 100%
+        border: 2px solid rgba(#41a5fb, .6)
+        outline: none
+        padding: 15px 20px
+        font-size: 17px
+        box-sizing: border-box
+        border-radius: 4px
+        &.bad_input
+            color: red
+            border: 2px solid rgba(red, .6)
+        &:before            
+            content: attr(title)
+            display: block
+            color: red
+        &[type='button']
+            cursor: pointer
+        &.submit
+            margin: 10px 0
+            color: white
+            font-size: 17px
+            font-weight: bold
+            text-transform: uppercase
+            background-color: #41a5fb
+        &.register, &.login
+            color: #41a5fb
+            border: none
+            outline: none
+            padding: 12px
+            font-size: 13px
+            background-color: white
+            transition: .4s all
+            &:hover
+                background-color: rgba(#41a5fb, .04)
+                
